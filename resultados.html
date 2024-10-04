@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resultados del Login</title>
+</head>
+<body>
+    <h1>Resultados del Login</h1>
+    <p id="datos"></p>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre');
+        const apellido = urlParams.get('apellido');
+        const grado = urlParams.get('grado');
+        const division = urlParams.get('division');
+
+        document.getElementById('datos').innerText = `Nombre: ${nombre} ${apellido}, Grado: ${grado}, División: ${division}`;
+    </script>
+</body>
+</html>
