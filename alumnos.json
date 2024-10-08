@@ -2416,8 +2416,8 @@
     },
     {
         "id": "342",
-        "nombre": "Lorenzo",
-        "apellido": "Castañon",
+        "nombre": "",
+        "apellido": "",
         "curso": "2° Grado ",
         "division": "B"
     },
@@ -2451,15 +2451,15 @@
     },
     {
         "id": "347",
-        "nombre": "Noah",
-        "apellido": "Domizi",
+        "nombre": "NoahNoah",
+        "apellido": "DomiziDomizi",
         "curso": "2° Grado ",
         "division": "B"
     },
     {
         "id": "348",
-        "nombre": "Julieta",
-        "apellido": "Gallardo",
+        "nombre": "JulietaJulieta",
+        "apellido": "GallardoGallardo",
         "curso": "2° Grado ",
         "division": "B"
     },
@@ -3196,17 +3196,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     
     {
         "id": "450",
@@ -3258,7 +3247,7 @@
         "curso": "3° Grado ",
         "division": "B"
     },    {
-        "id": "´458",
+        "id": "458",
         "nombre": "Bautista",
         "apellido": "Fernandez",
         "curso": "3° Grado ",
@@ -3367,17 +3356,6 @@
         "division": "B"
     },
     
-
-    
-    
-
-    
-
-
-
-
-    
-
 
 
 
@@ -3559,20 +3537,6 @@
     },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
         "id": "",
         "nombre": "",
@@ -3787,11 +3751,6 @@
 
 
 
-    
-
-
-
-    
 
 
 
@@ -3800,7 +3759,12 @@
 
 
 
-    
+
+
+
+
+
+
 
 
 
@@ -4543,7 +4507,7 @@
 
 
     
-   
+
     {
         "id": "",
         "nombre": "Olivia",
@@ -4656,8 +4620,7 @@
         "division": "A"
     },
     {
-     
-       "id": "",
+        "id": "",
         "nombre": "Tomás",
         "apellido": "Olguin",
         "curso": "6° Grado ",
@@ -4927,7 +4890,6 @@
         "curso": "6° Grado ",
         "division": "B"
     },
-   
     {
         "id": "1",
         "nombre": "Ramiro",
@@ -5836,4 +5798,7 @@
         "curso": "4° año de Secundaria ",
         "division": "B"
     }
+
 ]
+
+
