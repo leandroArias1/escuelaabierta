@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #e8f0fe;
@@ -29,7 +27,7 @@ h1 {
     max-width: 450px;
     text-align: center;
     transition: all 0.3s ease;
-    margin-inline: 500px;
+    margin: 0 auto; /* Cambiado a auto para centrar en pantalla grande */
 }
 
 .container:hover {
@@ -62,7 +60,11 @@ p {
 
 #qrcode {
     margin-top: 2em;
-    margin-inline: 100px;
+    margin: 0 auto; /* Centrar el QR */
+    display: flex; /* Para usar justify-content */
+    justify-content: center; /* Centrar contenido en el contenedor */
+    align-items: center; /* Alinear verticalmente, si es necesario */
+    max-width: 100%; /* Asegurar que no exceda el contenedor */
 }
 
 button {
@@ -81,6 +83,7 @@ button:hover {
     background-color: #1558b1;
 }
 
+/* Media Query para pantallas más pequeñas */
 @media (max-width: 500px) {
     body {
         padding: 15px;
@@ -107,5 +110,26 @@ button:hover {
         width: 100%;
         padding: 12px;
         font-size: 1.2em;
+    }
+}
+
+/* Media Query para pantallas grandes */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 500px; /* Aumentar el ancho máximo en pantallas grandes */
+        padding: 4em;
+        margin-inline: auto; /* Ajuste de márgenes */
+    }
+
+    h1 {
+        font-size: 3.5em; /* Aumentar tamaño de h1 */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Aumentar tamaño de h2 */
+    }
+
+    p {
+        font-size: 1.2em; /* Aumentar tamaño de p */
     }
 }
