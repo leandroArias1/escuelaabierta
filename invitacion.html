@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Entrada</title>
+    <link rel="stylesheet" href="invitacion.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Invitación a Escuela Abierta</h1>
+    <div class="container">
+        <h2>Presentar en la puerta de la escuela. <br><span>Válido hasta 2 familiares por alumno.</span></h2>
+        <p id="datos"></p>
+        <div id="qrcode"></div>
+        <button id="downloadBtn">Descargar QR</button>
+        
+        <script>
+            // Capturar parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombre = urlParams.get('nombre');
+            const apellido = urlParams.get('apellido');
+            const grado = urlParams.get('grado');
+            const division = urlParams.get('division');
+            const id = urlParams.get('id');  // Captura el ID del alumno
+
+            // Verificar que los valores estén definidos antes de usarlos
+            if (nombre && apellido && grado && division && id) {
+                // Mostrar los datos del alumno en la invitación
+                const datosElemento = document.getElementById('datos');
+                datosElemento.innerHTML = 'Nombre: ' + nombre + ' ' + apellido + '<br><br>Grado: ' + grado + ' División: ' + division;
+                
+                // Generar el código QR solo con el ID
+                const resultadosUrl = 'id=' + encodeURIComponent(id);
+                new QRCode(document.getElementById('qrcode'), {
+                    text: resultadosUrl,
+                    width: 128,
+                    height: 128
+                });
+            } else {
+                document.getElementById('datos').innerText = 'Error: No se encontraron todos los datos requeridos para generar la invitación.';
+            }
+
+            // Descargar el QR como imagen
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+                const qrCanvas = document.querySelector('#qrcode canvas');
+                const qrImage = qrCanvas.toDataURL('image/png');
+                
+                const downloadLink = document.createElement('a');
+                downloadLink.href = qrImage;
+                downloadLink.download = 'codigo_qr.png';
+                downloadLink.click();
+            });
+        </script>
+    </div>
+</body>
+</html>
